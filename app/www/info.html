@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>VEO Data Browser</h1>
+<p>The VEO Data Browser is a web application that communicates with an SQL server. The major aim of VEO Browser is to give a framework to store, categorize and visualize data tables related to VEO project. Partners can select the data tables of interest  in the VEO Data Browser that finally generates a code for direct downloading of the merged data tables from the SQL server.</p>
+<img src="veo_data_browser_structure.png", align="center">
+
+<ul>
+
+	<li>
+	<b>How goes data to the SQL server?</b>
+		<ul>In the background R scripts downloads the data tables from public dataset like (World Bank, WHO, etc.) through API if possible then the data is uploaded into SQL database. </ul>
+	</li>
+	<li>
+	<b>Is it possible to upload custom data tables?</b>
+		<ul> Yes, please contant through the email below for details. </ul>
+	</li>
+	<li>
+	<b>What is the structure of the database?</b>
+		<ul> The tables contains indicators in a given geographical and time resulutions:
+			<li>Geographycal resolution (https://ec.europa.eu/eurostat/web/nuts/background):</li>
+			<ul>
+				<li>Country</li>
+				<li>NUTS1: major socio-economic regions</li>
+				<li>NUTS2: basic regions for the application of regional policies</li>
+				<li>NUTS3: small regions for specific diagnoses</li>
+				<li>LAU: Local Administrative Units (cities)</li>
+			</ul>
+			<li>Time resolution:</li>
+			<ul>
+				<li>Permanent: if indicator does not change in time (eg. Local name of a country)</li>
+				<li>Year: Indicator changes in yearly</li>
+				<li>Month</li>
+				<li>Day</li>
+				<li>etc</li>
+			</ul>
+			More categories can be inserted if there is a need. In this version only those tables can be merged that are in the same category (except the "Permanent" tables those can be merged with tables derived from any time resolution. There are two other tables, one that store metadata of all tables ("master_table") and another one that contains metadata of each columns in each tables ("master_schema"). It is possible to direct dowload any tables separately (see the app).
+		</ul>
+		
+
+
+
+
+
+
+
+</ul>
+
+<p>Contact: <br>
+Krisztián Papp <br>
+email: krisztian.papp@phys-gs.elte.hu</p>
+
+</body>
+</html>
